@@ -38,4 +38,5 @@ teX = test.drop(['meal', 'id', 'DateTime'], axis=1)
 # Extreme Boosting; Boosted Trees
 model = XGBClassifier(n_estimators=100, max_depth=5, learning_rate=0.5, objective='binary:logistic')
 modelFit = model.fit(trX, trY)
-pred = modelFit.predict(teX)
+raw_pred = modelFit.predict(teX)
+pred = [int(x) for x in raw_pred]
