@@ -1,12 +1,11 @@
+# Drawing Data
 train = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/refs/heads/master/AssignmentData/assignment3.csv")
 test = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/refs/heads/master/AssignmentData/assignment3test.csv")
 
 # Just Exploring...
 px.line(train, x='DateTime', y='meal')
 
-train = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/refs/heads/master/AssignmentData/assignment3.csv")
-test = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/refs/heads/master/AssignmentData/assignment3test.csv")
-
+# Preprocessing
 train['DateTime'] = pd.to_datetime(train['DateTime'])
 train['year'] = train['DateTime'].dt.year
 train['month'] = train['DateTime'].dt.month
