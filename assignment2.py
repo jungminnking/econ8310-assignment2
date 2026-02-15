@@ -1,3 +1,15 @@
+# Importing 
+import pandas as pd
+import numpy as np
+import plotly.express as px
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import BaggingClassifier
+from xgboost import XGBClassifier
+from sklearn.model_selection import KFold
+
 # Drawing Data
 train = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/refs/heads/master/AssignmentData/assignment3.csv")
 test = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/refs/heads/master/AssignmentData/assignment3test.csv")
