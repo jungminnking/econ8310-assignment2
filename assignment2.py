@@ -33,6 +33,7 @@ trY = train['meal']
 trX = train.drop(['meal', 'id', 'DateTime'], axis=1)
 teY = test['meal']
 teX = test.drop(['meal', 'id', 'DateTime'], axis=1)
+teX = teX.head(744)
 
 # Extreme Boosting; Boosted Trees
 model = XGBClassifier(n_estimators=100, max_depth=5, learning_rate=0.5, objective='binary:logistic')
